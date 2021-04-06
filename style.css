@@ -11,7 +11,7 @@ h1{
   font-family: "poppins";
   font-size: 100px;
   color: white;
-  margin: 0;
+  margin: auto;
 }
 h1.white{
   color:black
