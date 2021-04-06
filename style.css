@@ -1,0 +1,66 @@
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body.off{
+  background-color: black;
+}
+h1{
+  font-family: "poppins";
+  font-size: 100px;
+  color: white;
+  margin: 0;
+}
+h1.white{
+  color:black
+}
+h1.color.off{
+  color:#00ff0a;
+  text-shadow: 0 0 10px #00ff0a,
+  0 0 20px #00ff0a,
+  0 0 60px #00ff0a,
+  0 0 40px #00ff0a;
+  animation: changeColor 10s linear infinite;
+}
+@keyframes changeColor{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+input{
+  width: 0;
+  height: 0;
+  margin: 0;
+  display: none;
+}
+.slide{
+  display: block;
+  width: 240px;
+  height: 100px;
+  border-radius:60px;
+  border: 6px solid black;
+}
+.slide.off{
+  border: 6px solid white
+}
+.slide::before{
+  display: block;
+  content: "";
+  position: relative;
+  width: 92px;
+  height: 92px;
+  background-color: black;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  transition: .5s;
+}
+input:checked + .slide::before{
+  transform: translateX(140px);
+  background-color: white;
+}

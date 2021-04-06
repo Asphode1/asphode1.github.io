@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Button</title>
+</head>
+<body>
+  <div>
+  <h1 class="white">HELLO!</h1>
+  <h1 class="color">FUCK YOU!</h1>
+  <label class="button">
+    <input type="checkbox">
+    <span class="slide"></span>
+  </label>
+  </div>
+  <script>
+    const body=document.querySelector('body')
+    const slide=document.querySelector('.slide')
+    const color=document.querySelector('.color')
+    document.querySelector('.slide').onclick = function(){
+      body.classList.toggle('off')
+      slide.classList.toggle('off')
+      color.classList.toggle('off')
+    }
+  </script>
+</body>
+</html>
